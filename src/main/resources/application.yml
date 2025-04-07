@@ -1,0 +1,22 @@
+spring.application.name: eureka-recall
+spring:
+  output:
+    ansi:
+      enabled: always
+
+server:
+  port:  8991
+
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-registry: false
+    # fix does not work for EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY'RE NOT
+    # server:
+    #     renewal-percent-threshold: 0.40
+    
+logging:
+  level:
+    '[com.netflix.eureka]': OFF
+    '[com.netflix.discovery]': OFF
+
